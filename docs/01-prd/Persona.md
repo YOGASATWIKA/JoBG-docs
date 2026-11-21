@@ -6,7 +6,7 @@ diperbarui: 2026-11-21
 # Persona
 
 > Tokoh fiktif untuk membantu merancang JoBG. Bukan orang asli.
-> Dua peran pengguna: **Kandidat** (pencari kerja pemula) dan **HR**.
+> Tiga peran pengguna: **Kandidat** (pencari kerja pemula), **HR**, dan **Master user** (pengelola JoBG).
 
 ## 🎓 Kandidat
 
@@ -47,6 +47,14 @@ diperbarui: 2026-11-21
 - **Siapa:** Satu-satunya HR di startup / UMKM 30 orang. Juga mengurus administrasi & payroll.
 - **Masalah:** Tidak punya waktu menyusun proses rekrutmen yang rapi; setiap lowongan prosesnya berbeda.
 - **JoBG membantu:** Menyusun alur dari jenis tahap yang tersedia & menyimpannya sebagai **template**; tes/tugas singkat untuk menyaring cepat.
+
+## 🛡️ Master user
+
+### M. Pengelola JoBG
+- **Siapa:** Pemilik / pengelola platform JoBG (untuk demo: saya sendiri).
+- **Tugas:** Menambahkan perusahaan dan membuat / menonaktifkan akun HR.
+- **Akses:** Penuh, tanpa terkecuali (semua perusahaan, lowongan, pelamar). Hanya **satu** akun.
+- **Kenapa perlu:** Hanya HR resmi yang bisa masuk ke Dashboard HR; HR tidak mendaftar sendiri.
 
 ## Persona utama MVP
 **K1 Raka** dan **H1 Sari**: skenario demo utama menunjukkan Raka yang jago tapi malas mengisi **tidak lagi terlewat** oleh Sari.

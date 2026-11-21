@@ -45,6 +45,7 @@ Detail: [[Persona]].
 |                     | Catatan & nilai interview                            | MVP       | US-31                      |
 | **Pemberitahuan** | Kabar ke kandidat di Portal (daftar, melamar, perubahan status) | MVP | (keputusan desain sistem) |
 | | Pemberitahuan lewat email | Nanti | |
+| **Master user** | Tambah perusahaan; buat & nonaktifkan akun HR | MVP | US-50, 51 |
 | **Blacklist**       | Blacklist dengan alasan & bukti; banding             | Nanti     | US-11, 32, 33              |
 | **Akses MCP**       | HR bertanya tentang pelamarnya lewat AI di luar JoBG | MVP       | US-40                      |
 |                     | AI memindahkan tahap atas perintah HR                | Nanti     | US-41                      |

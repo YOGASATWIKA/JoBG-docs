@@ -13,13 +13,14 @@ diperbarui: 2026-11-21
 | # | Bagian | Tugas | Dipakai oleh |
 |---|---|---|---|
 | 1 | **Portal Kandidat** | Halaman untuk mendaftar, memeriksa profil, menambah bukti, melihat lowongan, melamar, mengerjakan tes, melihat status | Kandidat |
+| 2b | **Dashboard Master** | Halaman untuk menambah perusahaan & mengelola akun HR | Master user |
 | 2 | **Dashboard HR** | Halaman untuk membuat lowongan & kriteria, menyusun alur, membuat tes, menilai, memutuskan | HR |
 | 3 | **Inti JoBG** | "Otak" aturan bisnis: profil, lowongan, alur, lamaran, penilaian, keputusan. **Semua pintu masuk wajib lewat sini.** | Bagian 1, 2, 6 |
 | 4 | **Penyimpanan Data** | Menyimpan data terstruktur (profil, lowongan, lamaran, penilaian, dll.) | Inti JoBG |
 | 5 | **Penyimpanan Dokumen** | Menyimpan CV, dokumen bukti, hasil tes | Inti JoBG |
 | 6 | **Pintu MCP** | Pintu bagi AI dari luar (mis. Claude) untuk mengakses JoBG atas nama HR | HR (lewat AI) |
 | 7 | **Asisten AI internal** | Menyusun profil dari CV, memisahkan klaim vs bukti, menandai ketidaksesuaian, memberi tanda "lihat sekali lagi" | Inti JoBG |
-| 8 | **Penjaga Akses** | Login, peran (kandidat / HR), perusahaan, dan aturan data apa yang boleh dilihat siapa | Semua bagian |
+| 8 | **Penjaga Akses** | Login, peran (kandidat / HR / master user), perusahaan, dan aturan data apa yang boleh dilihat siapa | Semua bagian |
 | 9 | **Catatan Aktivitas** | Mencatat keputusan HR, saran AI, dan akses lewat MCP | Inti JoBG |
 | 10 | **Pemberitahuan** | Memberi kabar ke kandidat (daftar berhasil, lamaran terkirim, status berubah). **MVP: di Portal saja**; email menyusul | Kandidat |
 
@@ -52,7 +53,7 @@ diperbarui: 2026-11-21
 
 ## 3. Data utama (konsep)
 ```
-Perusahaan ──< HR
+Master user ──< Perusahaan ──< HR (akun dibuat master user)
 Perusahaan ──< Lowongan ──< Kriteria (wajib / nilai tambah)
                    │
                    └──< Alur ──< Tahap (seleksi berkas / tes / interview) ── Tes
@@ -102,15 +103,17 @@ HR di Claude: "ringkas pelamar Admin Keuangan yang lolos tes"
 ```
 
 ## 5. Siapa boleh melihat apa (konsep)
-| Data | Kandidat (pemilik) | HR perusahaan yang dilamar | HR perusahaan lain | AI lewat MCP |
-|---|---|---|---|---|
-| Profil & bukti | ✅ | ✅ setelah melamar | ❌ | Sama seperti HR yang login |
-| Data ⚠️ sensitif | ✅ | ✅ langsung terlihat setelah kandidat melamar (🔒 bila mode tanpa identitas dinyalakan, Nanti) | ❌ | Sama seperti HR yang login |
-| Lowongan aktif | ✅ | ✅ | ✅ | Sama seperti HR yang login |
-| Kriteria penilaian | ✅ sebagai syarat lowongan | ✅ | ❌ | Sama seperti HR yang login |
-| Alur lengkap lowongan | ❌ hanya tahap saat ini | ✅ | ❌ | Sama seperti HR yang login |
-| Penilaian & tanda AI | ❌ | ✅ | ❌ | Sama seperti HR yang login |
-| Alasan blacklist | ✅ (Nanti) | ✅ | ❌ | Sama seperti HR yang login |
+| Data | Kandidat (pemilik) | HR perusahaan yang dilamar | HR perusahaan lain | Master user | AI lewat MCP |
+|---|---|---|---|---|---|
+| Profil & bukti | ✅ | ✅ setelah melamar | ❌ | ✅ | Sama seperti HR yang login |
+| Data ⚠️ sensitif | ✅ | ✅ langsung terlihat setelah kandidat melamar (🔒 bila mode tanpa identitas dinyalakan, Nanti) | ❌ | ✅ | Sama seperti HR yang login |
+| Lowongan aktif | ✅ | ✅ | ✅ | ✅ | Sama seperti HR yang login |
+| Kriteria penilaian | ✅ sebagai syarat lowongan | ✅ | ❌ | ✅ | Sama seperti HR yang login |
+| Alur lengkap lowongan | ❌ hanya tahap saat ini | ✅ | ❌ | ✅ | Sama seperti HR yang login |
+| Penilaian & tanda AI | ❌ | ✅ | ❌ | ✅ | Sama seperti HR yang login |
+| Alasan blacklist | ✅ (Nanti) | ✅ | ❌ | ✅ | Sama seperti HR yang login |
+
+> **Master user** punya akses penuh ke semua data & aksi. Karena itu **semua aksi master user wajib tercatat** di Catatan Aktivitas.
 
 ## 6. Dibahas nanti (breakdown teknis)
 - [ ] Pilihan bahasa & framework

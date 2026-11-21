@@ -40,3 +40,4 @@ Daftar istilah agar semua dokumen memakai kata yang sama.
 | **Jenis tahap** | Kategori tahap yang disediakan JoBG: seleksi berkas, permintaan dokumen, tes/tugas, interview, penawaran | |
 | **Template alur** | Alur rekrutmen yang disimpan HR untuk dipakai ulang | |
 | **Rawan klaim** | Data yang sering dikosongkan sekaligus sering dilebih-lebihkan; wajib dibuktikan | Pengalaman, kemampuan, skill |
+| **Master user** | Satu-satunya pengelola JoBG; akses penuh; menambahkan perusahaan & membuat akun HR | |

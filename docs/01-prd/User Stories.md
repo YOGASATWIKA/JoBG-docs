@@ -42,7 +42,7 @@ Persona: lihat [[Persona]]. Prioritas: **MVP** = versi pertama · **Nanti** = se
 | US-21 | Sebagai HR, saya ingin **menulis kriteria penilaian** (wajib & nilai tambah) **sebelum** melihat pelamar, agar penilaian konsisten | H1 | MVP | Lowongan tidak bisa dibuka tanpa minimal satu kriteria wajib |
 | US-22 | Sebagai HR, saya ingin **menyusun alur rekrutmen** dari jenis tahap yang tersedia, agar sesuai proses perusahaan saya | H1, H2 | MVP | Jenis tahap MVP: seleksi berkas, tes / tugas, interview; jumlah tahap bebas |
 | US-23 | Sebagai HR, saya ingin **menyimpan alur sebagai template**, agar bisa dipakai ulang | H2 | Nanti | Template bisa dipilih saat membuat lowongan baru |
-| US-24 | Sebagai HR, saya ingin **membuat tes / tugas singkat** untuk tahap tes, agar bisa melihat kemampuan langsung | H1, H2 | MVP | Tes terhubung ke tahap & lowongan tertentu |
+| US-24 | Sebagai HR, saya ingin **membuat tes / tugas singkat** untuk tahap tes, agar bisa melihat kemampuan langsung | H1, H2 | MVP | Tes terhubung ke tahap & lowongan tertentu; batas waktu bisa diaktifkan atau tidak |
 
 ### Menilai & memutuskan
 | ID | User story | Persona | Prioritas | Kriteria diterima |
@@ -57,15 +57,22 @@ Persona: lihat [[Persona]]. Prioritas: **MVP** = versi pertama · **Nanti** = se
 | US-32 | Sebagai HR, saya ingin **mem-blacklist kandidat dengan alasan & bukti**, agar kandidat semena-mena tidak mengotori data | H1 | Nanti | Hanya untuk perilaku; berlaku di perusahaan itu saja |
 | US-33 | Sebagai HR, saya ingin **meninjau banding blacklist**, agar akses bisa dibuka bila alasan sudah dipenuhi | H1 | Nanti | Keputusan banding wajib disertai alasan |
 
+## 🛡️ Master user
+| ID | User story | Persona | Prioritas | Kriteria diterima |
+|---|---|---|---|---|
+| US-50 | Sebagai master user, saya ingin **menambahkan perusahaan**, agar HR perusahaan itu bisa memakai JoBG | M | MVP | Perusahaan tersimpan dengan nama, sektor, lokasi |
+| US-51 | Sebagai master user, saya ingin **membuat & menonaktifkan akun HR** untuk sebuah perusahaan, agar hanya HR resmi yang bisa masuk | M | MVP | HR menerima undangan email; akun nonaktif tidak bisa masuk |
+
 ## 🤖 Akses lewat AI dari luar JoBG (MCP)
 | ID | User story | Persona | Prioritas | Kriteria diterima |
 |---|---|---|---|---|
 | US-40 | Sebagai HR, saya ingin **bertanya ke asisten AI (mis. Claude) di luar JoBG** tentang pelamar saya, mis. *"ringkas pelamar lowongan Admin Keuangan yang lolos tes"*, agar bekerja lebih cepat | H1 | MVP | AI hanya bisa melihat data lowongan milik perusahaan HR tersebut |
 | US-41 | Sebagai HR, saya ingin **AI bisa memindahkan tahap kandidat atas perintah saya**, agar tidak perlu membuka dashboard | H1 | Nanti | Setiap aksi tulis meminta konfirmasi & tercatat |
 
-## Ringkasan MVP (18 stories)
+## Ringkasan MVP (20 stories)
 **Kandidat:** US-01, 02, 03, 05, 08, 09, 10
 **HR:** US-20, 21, 22, 24, 25, 26, 27, 29, 30, 31
+**Master user:** US-50, 51
 **MCP:** US-40
 
 > Asisten AI (chatbot) untuk kandidat **ditunda** (US-06, 07).
