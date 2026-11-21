@@ -11,7 +11,7 @@ Status dokumen: `⬜ kosong` → `📝 draf` → `🔍 review` → `✅ final`
 | 1 | Overview | [[Visi]] · [[Glosarium]] | ✅ |
 | 2 | PRD | [[PRD]] · [[Persona]] · [[User Stories]] · [[Peta Data Kandidat]] · [[Alur Rekrutmen]] | ✅ |
 | 3 | Desain sistem | [[Gambaran Sistem]] | ✅ |
-| 4 | Desain UI | [[User Flow]] · [[Wireframe]] · [[Design System]] | 📝 (User Flow, Wireframe ✅ · Design System 📝 · lalu prototipe visual) |
+| 4 | Desain UI | [[User Flow]] · [[Wireframe]] · [[Design System]] | 📝 (User Flow, Wireframe, Design System ✅ · prototipe visual 📝) |
 | 5 | Konvensi | [[Branch]] · [[Commit]] · [[Pull Request]] · [[Code Style]] | ⬜ |
 | 6 | Roadmap | [[Roadmap]] | ⬜ |
 | 7 | ✅ Mulai coding | | |
