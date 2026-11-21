@@ -1,0 +1,13 @@
+# Obsidian: simpan pengaturan bersama, abaikan status pribadi
+docs/.obsidian/workspace.json
+docs/.obsidian/workspace-mobile.json
+docs/.obsidian/cache
+.trash/
+
+# Repository kode terpisah (punya git sendiri)
+apps/JoBG-BE/
+apps/JoBG-FE/
+
+# Obsidian bila root dibuka sebagai vault
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
